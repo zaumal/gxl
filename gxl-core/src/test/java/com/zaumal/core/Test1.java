@@ -2,10 +2,7 @@ package com.zaumal.core;
 
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest {
+public class Test1 {
 	@Test
 	public void test1(){
 		

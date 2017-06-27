@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.zaumal</groupId>
@@ -11,6 +11,15 @@
 		<junit.version>4.12</junit.version>
 		<spring.version>4.3.9.RELEASE</spring.version>
 	    <activemq.version>5.14.1</activemq.version>
+	    <servlet.version>2.5</servlet.version>
+	    <fastJson.version>1.2.28</fastJson.version>
+	    <common-lang3.version>3.0</common-lang3.version>
+	    <jedis.veersion>2.9.0</jedis.veersion>
+		<spring.data.redis.version>1.8.3.RELEASE</spring.data.redis.version>
+		<spring.data.jpa.version>1.8.1.RELEASE</spring.data.jpa.version>
+		<hibernate.version>5.2.10.Final</hibernate.version>
+		<log4j.version>1.2.12</log4j.version>
+		<slf4j.version>1.5.8</slf4j.version>
 	
 	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	 	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -39,6 +48,11 @@
 				<version>${spring.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
 			    <groupId>org.springframework</groupId>
 			    <artifactId>spring-aop</artifactId>
 			    <version>${spring.version}</version>
@@ -64,6 +78,61 @@
 				<version>${activemq.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>${servlet.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastJson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${common-lang3.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.springframework.data</groupId>
+			    <artifactId>spring-data-redis</artifactId>
+			    <version>${spring.data.redis.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>redis.clients</groupId>
+			    <artifactId>jedis</artifactId>
+			    <version>${jedis.veersion}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-jpa</artifactId>
+				<version>${spring.data.jpa.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
 			    <groupId>junit</groupId>
 			    <artifactId>junit</artifactId>
 			    <version>${junit.version}</version>
@@ -74,5 +143,6 @@
 	
 	<modules>
 		<module>gxl-core</module>
-	</modules>
+	    <module>gxl-web</module>
+  	</modules>
 </project>
